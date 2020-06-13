@@ -1,3 +1,3 @@
-import '../../SEMANTIC-UI-LESS/semantic.less'
+import '../../SEMANTIC-UI-LESS/semantic.less';
 
-export { default as Button } from './Button'
+export { default as Button } from './Button';

@@ -22,5 +22,6 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "moduleResolution": "node"
-  }
+  },
+  "exclude": ["node_modules"]
 }
