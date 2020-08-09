@@ -26,6 +26,7 @@
   "homepage": "https://github.com/Lior-Dolev/liordolev#readme",
   "devDependencies": {
     "@storybook/react": "^5.3.17",
+    "@types/classnames": "^2.2.10",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",

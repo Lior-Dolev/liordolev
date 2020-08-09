@@ -1,61 +1,27 @@
 import React, { Component } from 'react';
-import { Menu, Icon, Sidebar, SidebarProps, Segment } from 'semantic-ui-react';
-import { Logo, Header } from '@components';
-import classnames from 'classnames';
+import { MobileHeader } from '@components';
 
-type MenuProps = {
-  openMenu: () => void;
-};
-
-const MyMenu = ({ openMenu }: MenuProps) => (
-  <Menu as={'header'} inverted>
-    <Menu.Item as={'nav'} onClick={() => openMenu()}>
-      <Icon name={'bars'} />
-    </Menu.Item>
-    <Menu.Item as={'nav'} position={'left'} className={'logo'}>
-      <Logo width={'13.5rem'} height={'3rem'} />
-    </Menu.Item>
-  </Menu>
-);
-
-const HorizontalSidebar = ({
-  animation = 'overlay',
-  direction = 'top',
-  visible,
-}: SidebarProps) => (
-  <Sidebar
-    as={Segment}
-    animation={animation}
-    direction={direction}
-    visible={visible}
-  >
-    <div>menu</div>
-  </Sidebar>
-);
-
-export default class App extends Component<{}, { show: boolean }> {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      show: false,
-    };
-  }
-
+export default class App extends Component {
   render() {
-    const overlayClassName = classnames('nav-overlay', {
-      show: this.state.show,
-      'anim-nav-overlay': this.state.show,
-    });
-
     return (
       <div className={'ld-app'}>
-        <HorizontalSidebar visible={this.state.show} />
-        <Header>
-          <MyMenu openMenu={() => this.setState({ show: !this.state.show })} />
-        </Header>
-        {/* <div className={overlayClassName}></div> */}
-        <div>page</div>
+        <MobileHeader />
+        <div className={'page'}>
+          {[...Array(5).keys()].map((key) => (
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
+              risus ut sem placerat sagittis. Nam dictum libero nec nulla
+              tempus, sit amet dapibus est pulvinar. Ut mattis tempus purus, nec
+              ultrices erat hendrerit at. In sit amet consectetur ligula.
+              Vestibulum pulvinar pharetra lorem. Morbi tincidunt magna ante,
+              maximus scelerisque ex blandit at. Nam ultrices nisl vitae
+              bibendum semper. Quisque aliquet enim metus, nec rutrum sem
+              suscipit quis. Cras metus ante, tincidunt id purus ac, porttitor
+              aliquam diam. Nam mollis fringilla ante et aliquet. Aliquam quis
+              euismod leo, non elementum magna.
+            </p>
+          ))}
+        </div>
       </div>
     );
   }

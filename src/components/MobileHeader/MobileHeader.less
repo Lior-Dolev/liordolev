@@ -1,0 +1,37 @@
+/*******************************
+          Mobile Header
+*******************************/
+
+.ld-app .header {
+  border-radius: 0;
+  z-index: 11;
+  max-height: 60px;
+}
+
+.ld-app .header.mobile {
+  background-color: black;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'nav logo live';
+  grid-template-columns: 60px auto 60px;
+  justify-items: center;
+  align-items: center;
+}
+
+.ld-app .icon {
+  font-size: 24px;
+  margin: 0;
+}
+
+.ld-app .menu {
+  direction: rtl;
+  margin: 0;
+}
+
+.ld-app .ui.menu .item {
+  padding: 0;
+}
+
+.header .item {
+  z-index: 11;
+}
