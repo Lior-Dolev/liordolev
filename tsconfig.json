@@ -3,7 +3,7 @@
     "outDir": "./dist",
     "module": "esnext",
     "target": "es2015",
-    "lib": [ "ES5", "ES6", "DOM", "ES2016", "ES2017" ],
+    "lib": ["ES5", "ES6", "DOM", "ES2016", "ES2017"],
     "sourceMap": true,
     "allowJs": false,
     "jsx": "react",
@@ -21,7 +21,11 @@
     "downlevelIteration": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@components": ["src/components"]
+    }
   },
   "exclude": ["node_modules"]
 }

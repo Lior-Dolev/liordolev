@@ -1,10 +1,21 @@
+const Paths = require('./Paths.js');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const Paths = require('../Paths.js');
 
 module.exports = {
-  stories: ['../src/components/**/*.story.tsx'],
-  webpackFinal: async (config) => {
-    config.module.rules.push(
+  entry: './src/index',
+  output: {
+    path: Paths.dist,
+    filename: 'bundle.js',
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+    alias: {
+      '@components': Paths.components,
+    },
+  },
+  module: {
+    rules: [
       {
         test: /\.(ts|tsx)$/,
         use: [{ loader: require.resolve('awesome-typescript-loader') }],
@@ -23,24 +34,21 @@ module.exports = {
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: [{ loader: 'url-loader' }],
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: [{ loader: 'file-loader' }],
       },
-    );
-
-    config.plugins.push(
-      new MiniCssExtractPlugin({
-        filename: '[name].[contenthash].css',
-      }),
-    );
-
-    config.resolve.extensions.push('.ts', '.tsx', '.js');
-    config.resolve.alias = {
-      '@components': Paths.components,
-    };
-
-    return config;
+    ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: Paths.template,
+      favicon: Paths.favicon,
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
+  ],
 };
