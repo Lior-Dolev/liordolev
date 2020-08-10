@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MobileHeader } from '@components';
+import { MobileHeader, Newsletter } from '@components';
 
 export default class App extends Component {
   render() {
@@ -22,6 +22,7 @@ export default class App extends Component {
             </p>
           ))}
         </div>
+        <Newsletter />
       </div>
     );
   }
