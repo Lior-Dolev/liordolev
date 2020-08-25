@@ -12,6 +12,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
       '@components': Paths.components,
+      '@layouts': Paths.layouts,
     },
   },
   module: {

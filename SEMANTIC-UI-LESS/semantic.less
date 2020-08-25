@@ -7,10 +7,9 @@
 ███████║███████╗██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║   ██║╚██████╗    ╚██████╔╝██║
 ╚══════╝╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝ ╚═════╝     ╚═════╝ ╚═╝
 
-  Import this file into your LESS project to use Semantic UI without build tools
 */
 
-/* Global */
+/* Globals */
 & {
   @import './definitions/globals/reset';
 }
@@ -23,8 +22,18 @@
   @import './definitions/elements/button';
 }
 & {
+  @import './definitions/elements/icon';
+}
+
+/* Collections */
+& {
   @import './definitions/collections/menu';
 }
 & {
-  @import './definitions/elements/icon';
+  @import './definitions/collections/form';
+}
+
+/* Modules */
+& {
+  @import './definitions/modules/modal';
 }
