@@ -7,7 +7,9 @@ export default class App extends Component {
     return (
       <div className={'ld-app'}>
         <MobileHeader />
-        <Home />
+        <main className={'main'}>
+          <Home />
+        </main>
         <Newsletter />
       </div>
     );

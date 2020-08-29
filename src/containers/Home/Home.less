@@ -1,0 +1,46 @@
+/*******************************
+              Home
+*******************************/
+
+.image-container {
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 40px;
+  min-height: 375px;
+  display: grid;
+  justify-content: center;
+  background-color: black;
+  grid-template-rows: 375px auto 1fr;
+  grid-gap: 1em;
+}
+
+.image-container img {
+  height: 375px;
+}
+
+.image-container button.ui.inverted.button {
+  height: 4rem;
+  direction: rtl;
+  margin: 1rem;
+}
+
+.image-container nav {
+  justify-content: center;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  letter-spacing: 0.5em;
+}
+
+.image-container nav .icon {
+  color: #e39ca5;
+  margin-right: 5px;
+}
+
+.image-container nav .icon:last-child {
+  margin-right: 0;
+}
+
+.image-container nav .icon.apple {
+  margin-top: -4px;
+}

@@ -33,6 +33,7 @@ const Youtube = ({ trackName }: YoutubeProps) => (
           allowFullScreen
           width={maxWidth}
           height={maxWidth * YOUTUBE_HEIGHT_RATIO}
+          style={{ left: (width - maxWidth) / 2 }}
         />
       );
     }}

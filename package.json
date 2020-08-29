@@ -7,7 +7,8 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "start": "webpack-dev-server --mode development --open --hot",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
-    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./ --fix"
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./ --fix",
+    "build": "webpack"
   },
   "husky": {
     "hooks": {
