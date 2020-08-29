@@ -12,8 +12,7 @@ body,
 .ld-app .main {
   height: 100vh;
   max-height: 100vh;
-  padding-top: 59px;
-  overflow-y: auto;
+  margin-top: 59px;
 }
 
 /*
@@ -16790,5 +16789,6 @@ button.ui.circular.icon.button.newsletter-button {
 .ld-app .page {
   min-height: 100%;
   background-color: #f0f0f0;
+  padding-bottom: calc(24px + 1.8em);
 }
 
