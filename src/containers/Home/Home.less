@@ -18,10 +18,13 @@
   height: 375px;
 }
 
-.image-container button.ui.inverted.button {
+.image-container .ui.inverted.button {
   height: 4rem;
   direction: rtl;
   margin: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .image-container nav {
@@ -32,12 +35,22 @@
   letter-spacing: 0.5em;
 }
 
+.image-container nav:hover .icon {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.7;
+}
+
+.image-container nav .icon:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 .image-container nav .icon {
   color: #e39ca5;
   margin-right: 5px;
 }
 
-.image-container nav .icon:last-child {
+.image-container nav .link:last-child {
   margin-right: 0;
 }
 

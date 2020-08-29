@@ -1,6 +1,12 @@
 /*******************************
            Newsletter
 *******************************/
+
+body.animating.in.dimmable,
+body.dimmed.dimmable {
+  overflow-y: scroll;
+}
+
 .ui.page.modals.dimmer.transition.visible.active {
   justify-content: center;
 }
@@ -49,6 +55,7 @@ button.ui.circular.icon.button.newsletter-button {
   margin: 1em;
   bottom: 0px;
   right: 0px;
+  z-index: 11;
 }
 
 .icon.mail {
