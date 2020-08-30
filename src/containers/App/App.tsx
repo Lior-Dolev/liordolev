@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
+import { HashRouter } from 'react-router-dom';
 import { MobileHeader, Newsletter } from '@components';
-import Home from '../Home';
+import Router from './Router';
 
 export default class App extends Component {
   render() {
     return (
-      <div className={'ld-app'}>
-        <MobileHeader />
-        <main className={'main'}>
-          <Home />
-        </main>
-        <Newsletter />
-      </div>
+      <HashRouter>
+        <div className={'ld-app'}>
+          <MobileHeader />
+          <main className={'main'}>
+            <Router />
+          </main>
+          <Newsletter />
+        </div>
+      </HashRouter>
     );
   }
 }
