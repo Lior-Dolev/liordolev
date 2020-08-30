@@ -6,3 +6,4 @@ export { default as Newsletter } from './Newsletter';
 export { default as Logo } from './Logo';
 export { default as Youtube } from './Youtube';
 export { default as Letter } from './Letter';
+export { default as SocialNav } from './SocialNav';
