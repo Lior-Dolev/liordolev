@@ -1,15 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, Icon } from 'semantic-ui-react';
+import { Menu, Icon, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { Logo, MenuOverlay } from '@components';
 import classnames from 'classnames';
 
 type MenuProps = {
   className?: string;
+  onOpenModal: () => void;
+  onCloseModal: () => void;
+  inert?: boolean;
 };
 
-const MobileHeader = ({ className }: MenuProps) => {
+const MobileHeader = ({
+  className,
+  onOpenModal,
+  onCloseModal,
+  inert,
+}: MenuProps) => {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  const [inertProps, setInertProps] = useState({});
 
   const onKeyDown = (e) => {
     if (e.key === 'Escape' || e.keyCode === 27) {
@@ -25,12 +34,24 @@ const MobileHeader = ({ className }: MenuProps) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isOverlayVisible) {
+      onOpenModal();
+    } else {
+      onCloseModal();
+    }
+  }, [isOverlayVisible]);
+
+  useEffect(() => {
+    if (inert) {
+      setInertProps({ tabIndex: '-1' });
+    } else {
+      setInertProps({});
+    }
+  }, [inert]);
+
   return (
     <>
-      <MenuOverlay
-        visible={isOverlayVisible}
-        onClick={() => setIsOverlayVisible(false)}
-      />
       <Menu
         className={classnames('header mobile', className)}
         as={'header'}
@@ -38,20 +59,26 @@ const MobileHeader = ({ className }: MenuProps) => {
         fixed={'top'}
       >
         <Menu.Item
-          as={'nav'}
+          as={Button}
           onClick={() => setIsOverlayVisible(!isOverlayVisible)}
+          {...inertProps}
         >
-          <Icon name={'bars'} />
+          <Icon tabIndex={'-1'} name={'bars'} />
         </Menu.Item>
         <Menu.Item
           as={Link}
           to={'/'}
           className={'logo'}
           onClick={() => setIsOverlayVisible(false)}
+          {...inertProps}
         >
           <Logo width={'13.5rem'} height={'3rem'} />
         </Menu.Item>
       </Menu>
+      <MenuOverlay
+        visible={isOverlayVisible}
+        onClick={() => setIsOverlayVisible(false)}
+      />
     </>
   );
 };
