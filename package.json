@@ -8,7 +8,8 @@
     "start": "webpack-dev-server --mode development --open --hot",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./ --fix",
-    "build": "webpack"
+    "clean": "shx rm -rf dist",
+    "build": "npm run clean && webpack"
   },
   "husky": {
     "hooks": {
@@ -48,6 +49,7 @@
     "mini-css-extract-plugin": "^0.9.0",
     "path": "^0.12.7",
     "prettier": "^2.0.5",
+    "shx": "^0.3.2",
     "typescript": "^3.8.3",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
