@@ -16699,7 +16699,8 @@ Floated Menu / Item
   color: white;
   z-index: 10;
 }
-.nav-wrapper .ui.menu .item:hover {
+.nav-wrapper .ui.menu .item:hover,
+.nav-wrapper .ui.menu .item:focus {
   color: #e39ca5;
 }
 
@@ -16860,4 +16861,20 @@ nav.social .link:last-child {
   padding-bottom: calc(24px + 1.8em);
   font-family: 'Rubik', sans-serif;
 }
+
+/*******************************
+              Music
+*******************************/
+
+/*******************************
+              Tour
+*******************************/
+
+/*******************************
+              About
+*******************************/
+
+/*******************************
+             Contact
+*******************************/
 

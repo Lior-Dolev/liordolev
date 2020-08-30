@@ -1,2 +1,2 @@
-import './Contact';
+import './Contact.less';
 export { default } from './Contact';

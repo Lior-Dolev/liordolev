@@ -1,5 +1,6 @@
 import React from 'react';
+import { Page } from '@layouts';
 
-const Contact = () => <div>sfaf</div>;
+const Contact = () => <Page>צרו קשר</Page>;
 
 export default Contact;
