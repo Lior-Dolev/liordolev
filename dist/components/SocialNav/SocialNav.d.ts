@@ -1,3 +1,4 @@
 /// <reference types="react" />
-declare const SocialNav: () => JSX.Element;
+import { SocialNavProps } from './types';
+declare const SocialNav: (props: SocialNavProps) => JSX.Element;
 export default SocialNav;

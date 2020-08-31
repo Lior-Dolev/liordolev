@@ -3,7 +3,7 @@ declare type MenuProps = {
     className?: string;
     onOpenModal: () => void;
     onCloseModal: () => void;
-    inert?: boolean;
+    tabIndex?: number;
 };
-declare const MobileHeader: ({ className, onOpenModal, onCloseModal, inert, }: MenuProps) => JSX.Element;
+declare const MobileHeader: ({ className, onOpenModal, onCloseModal, tabIndex, }: MenuProps) => JSX.Element;
 export default MobileHeader;

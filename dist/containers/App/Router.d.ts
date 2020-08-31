@@ -1,3 +1,5 @@
 /// <reference types="react" />
-declare const Router: () => JSX.Element;
+import { PageProps } from '@layouts';
+declare type RouterProps = PageProps & {};
+declare const Router: (routerProps: RouterProps) => JSX.Element;
 export default Router;

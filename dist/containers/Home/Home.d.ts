@@ -1,3 +1,4 @@
 /// <reference types="react" />
-declare const Home: () => JSX.Element;
+import { HomeProps } from './types';
+declare const Home: ({ tabIndex }: HomeProps) => JSX.Element;
 export default Home;

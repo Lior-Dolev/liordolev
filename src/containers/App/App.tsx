@@ -29,6 +29,7 @@ export default class App extends Component<
             tabIndex={isNewsletterOpen ? -1 : null}
           />
           <main className={'main'}>
+            <div style={{ height: 59 }} />
             <Router tabIndex={tabIndex} />
           </main>
           <Newsletter

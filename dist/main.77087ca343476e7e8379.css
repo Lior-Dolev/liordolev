@@ -12,7 +12,7 @@ body,
   width: 100%;
 }
 .ld-app .main {
-  height: 100vh;
+  height: calc(100% - 59px);
   max-height: 100vh;
 }
 
@@ -2104,7 +2104,7 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   background: #FFFFFF;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 14px;
   line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
@@ -2118,7 +2118,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1.28571429em;
   margin: calc(2rem -  0.14285714em ) 0em 1rem;
   font-weight: bold;
@@ -14592,7 +14592,7 @@ Floated Menu / Item
 .ui.form input[type="text"],
 .ui.form input[type="file"],
 .ui.form input[type="url"] {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Rubik', sans-serif;
   margin: 0em;
   outline: none;
   -webkit-appearance: none;
@@ -16166,7 +16166,7 @@ Floated Menu / Item
 ---------------*/
 .ui.modal > .header {
   display: block;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Rubik', sans-serif;
   background: #FFFFFF;
   margin: 0em;
   padding: 1.25rem 1.5rem;
@@ -16877,4 +16877,21 @@ nav.social .link:last-child {
 /*******************************
              Contact
 *******************************/
+.ld-app .page.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  direction: rtl;
+  padding: calc(24px + 1.8em) 20px;
+}
+.ld-app .page.contact h2 {
+  margin-top: 1rem;
+}
+.ld-app .page.contact section:nth-of-type(2) h2 {
+  margin-top: 1.5rem;
+}
+.ld-app .page.contact span {
+  font-size: large;
+}
 

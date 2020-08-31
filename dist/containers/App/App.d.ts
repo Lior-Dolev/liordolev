@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import 'wicg-inert';
 export default class App extends Component<{}, {
     isMenuOpen: boolean;
     isNewsletterOpen: boolean;
