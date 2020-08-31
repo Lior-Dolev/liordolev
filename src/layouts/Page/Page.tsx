@@ -4,6 +4,7 @@ import { PageProps } from './types';
 
 const Page: FC<PageProps> = ({ className = '', children, id }) => (
   <div id={id} className={classnames('page', className)}>
+    <div style={{ height: 59 }} />
     {children}
   </div>
 );
