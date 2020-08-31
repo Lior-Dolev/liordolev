@@ -78,6 +78,7 @@ const MobileHeader = ({
       <MenuOverlay
         visible={isOverlayVisible}
         onClick={() => setIsOverlayVisible(false)}
+        {...inertProps}
       />
     </>
   );

@@ -7,6 +7,7 @@ const MenuOverlay = ({
   direction = 'top',
   visible,
   onClick,
+  tabIndex,
 }: SidebarProps) => (
   <Sidebar
     as={Segment}
@@ -16,20 +17,35 @@ const MenuOverlay = ({
   >
     <div className={'nav-wrapper'}>
       <Menu as={'nav'}>
-        <Menu.Item onClick={onClick} as={Link} to={'/'}>
+        <Menu.Item tabIndex={tabIndex} onClick={onClick} as={Link} to={'/'}>
           בית
         </Menu.Item>
-        <Menu.Item onClick={onClick} as={Link} to={'/music'}>
+        <Menu.Item
+          tabIndex={tabIndex}
+          onClick={onClick}
+          as={Link}
+          to={'/music'}
+        >
           מוזיקה
         </Menu.Item>
-        <Menu.Item onClick={onClick} as={Link} to={'/tour'}>
+        <Menu.Item tabIndex={tabIndex} onClick={onClick} as={Link} to={'/tour'}>
           הופעות
         </Menu.Item>
         <Menu.Item>חנות (בקרוב)</Menu.Item>
-        <Menu.Item onClick={onClick} as={Link} to={'/about'}>
+        <Menu.Item
+          tabIndex={tabIndex}
+          onClick={onClick}
+          as={Link}
+          to={'/about'}
+        >
           אודות
         </Menu.Item>
-        <Menu.Item onClick={onClick} as={Link} to={'/contact'}>
+        <Menu.Item
+          tabIndex={tabIndex}
+          onClick={onClick}
+          as={Link}
+          to={'/contact'}
+        >
           צרו קשר
         </Menu.Item>
       </Menu>
