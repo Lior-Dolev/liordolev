@@ -8,17 +8,16 @@ type MenuProps = {
   className?: string;
   onOpenModal: () => void;
   onCloseModal: () => void;
-  inert?: boolean;
+  tabIndex?: number;
 };
 
 const MobileHeader = ({
   className,
   onOpenModal,
   onCloseModal,
-  inert,
+  tabIndex,
 }: MenuProps) => {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
-  const [inertProps, setInertProps] = useState({});
 
   const onKeyDown = (e) => {
     if (e.key === 'Escape' || e.keyCode === 27) {
@@ -42,14 +41,6 @@ const MobileHeader = ({
     }
   }, [isOverlayVisible]);
 
-  useEffect(() => {
-    if (inert) {
-      setInertProps({ tabIndex: '-1' });
-    } else {
-      setInertProps({});
-    }
-  }, [inert]);
-
   return (
     <>
       <Menu
@@ -61,7 +52,7 @@ const MobileHeader = ({
         <Menu.Item
           as={Button}
           onClick={() => setIsOverlayVisible(!isOverlayVisible)}
-          {...inertProps}
+          tabIndex={tabIndex}
         >
           <Icon tabIndex={'-1'} name={'bars'} />
         </Menu.Item>
@@ -70,7 +61,7 @@ const MobileHeader = ({
           to={'/'}
           className={'logo'}
           onClick={() => setIsOverlayVisible(false)}
-          {...inertProps}
+          tabIndex={tabIndex}
         >
           <Logo width={'13.5rem'} height={'3rem'} />
         </Menu.Item>
@@ -78,6 +69,7 @@ const MobileHeader = ({
       <MenuOverlay
         visible={isOverlayVisible}
         onClick={() => setIsOverlayVisible(false)}
+        tabIndex={tabIndex}
       />
     </>
   );
