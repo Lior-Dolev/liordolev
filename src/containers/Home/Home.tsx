@@ -19,7 +19,9 @@ const Home = ({ tabIndex }: HomeProps) => {
         >
           משכך כאבים EP זמין להאזנה
         </Button>
-        <SocialNav tabIndex={tabIndex} />
+        <div className={'social'}>
+          <SocialNav tabIndex={tabIndex} />
+        </div>
       </div>
       <Letter />
     </Page>
