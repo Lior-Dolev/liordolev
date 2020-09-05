@@ -8,6 +8,7 @@ type AudioTrack = {
   singer: string;
   albumName: string;
   src: string;
+  duration: string;
 };
 
 const audioList: AudioTrack[] = [
@@ -15,6 +16,7 @@ const audioList: AudioTrack[] = [
     trackName: 'משכך כאבים',
     singer: 'ליאור דולב',
     albumName: 'משכך כאבים',
+    duration: '4:00',
     src:
       'https://s3.eu-central-1.amazonaws.com/liordolev.com/music/Meshakech_Keevim.mp3',
   },
@@ -22,6 +24,7 @@ const audioList: AudioTrack[] = [
     trackName: 'כשתחזרי',
     singer: 'ליאור דולב',
     albumName: 'משכך כאבים',
+    duration: '3:40',
     src:
       'https://s3.eu-central-1.amazonaws.com/liordolev.com/music/Kshetachzeri.mp3',
   },
@@ -29,6 +32,7 @@ const audioList: AudioTrack[] = [
     trackName: 'גור אדם',
     singer: 'ליאור דולב',
     albumName: 'משכך כאבים',
+    duration: '2:53',
     src:
       'https://s3.eu-central-1.amazonaws.com/liordolev.com/music/Goor_Adam.mp3',
   },
@@ -36,6 +40,7 @@ const audioList: AudioTrack[] = [
     trackName: 'הלב המשומש',
     singer: 'ליאור דולב',
     albumName: 'משכך כאבים',
+    duration: '2:47',
     src:
       'https://s3.eu-central-1.amazonaws.com/liordolev.com/music/Halev_Hameshumash.mp3',
   },
@@ -169,6 +174,18 @@ const Music = () => {
     }
   };
 
+  const onTrackClick = (i: number) => {
+    setTrackIndex(i);
+
+    if (!autoPlay) {
+      if (i === 0) {
+        onPlay();
+      }
+
+      setAutoPlay(true);
+    }
+  };
+
   return (
     <Page className="music">
       <div className="album">
@@ -225,6 +242,16 @@ const Music = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="track-list">
+          {audioList.map(({ trackName: name, duration }, i) => (
+            // eslint-disable-next-line
+            <div className="track" onClick={() => onTrackClick(i)}>
+              <span className="number">{i + 1}</span>
+              <span className="name">{name}</span>
+              <span className="duration">{duration}</span>
+            </div>
+          ))}
         </div>
       </div>
     </Page>

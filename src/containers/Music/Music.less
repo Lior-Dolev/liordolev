@@ -16,17 +16,17 @@
   width: 331px;
 }
 
-.ld-app .page.music .album .track {
+.ld-app .page.music .album > .track {
   direction: rtl;
   padding: 0.5em;
   font-weight: bold;
 }
 
-.ld-app .page.music .album .track .name {
+.ld-app .page.music .album > .track .name {
   display: block;
 }
 
-.ld-app .page.music .album .track .extra {
+.ld-app .page.music .album > .track .extra {
   font-size: larger;
 }
 
@@ -67,4 +67,24 @@
 .ld-app .page.music .album .controls progress {
   margin-right: 8px;
   margin-left: 8px;
+}
+
+.ld-app .page.music .album .track-list {
+  padding: 10px;
+}
+
+.ld-app .page.music .album .track-list .track {
+  display: grid;
+  direction: rtl;
+  grid-template-columns: 10px 1fr auto;
+  grid-gap: 10px;
+  border-top: 1px solid grey;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.ld-app .page.music .album .track-list .track:hover {
+  color: #8c8c8b;
+  cursor: pointer;
 }
