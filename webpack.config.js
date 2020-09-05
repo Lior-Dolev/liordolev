@@ -1,6 +1,6 @@
-const Paths = require('./Paths.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Paths = require('./Paths.js');
 
 module.exports = {
   entry: './src/index',

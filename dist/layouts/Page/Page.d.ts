@@ -1,4 +1,4 @@
-import { FC } from 'react';
+/// <reference types="react" />
 import { PageProps } from './types';
-declare const Page: FC<PageProps>;
+declare const Page: ({ className, children, id }: PageProps) => JSX.Element;
 export default Page;

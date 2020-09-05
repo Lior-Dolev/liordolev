@@ -1,6 +1,6 @@
 import React from 'react';
-import { YoutubeProps } from './types';
 import AutoSizer from 'react-virtualized-auto-sizer';
+import { YoutubeProps } from './types';
 
 const YOUTUBE_HEIGHT_RATIO = 0.5625;
 const YOUTUBE_WIDTH_RATIO = 1.7777;
@@ -34,6 +34,7 @@ const Youtube = ({ trackName }: YoutubeProps) => (
           width={maxWidth}
           height={maxWidth * YOUTUBE_HEIGHT_RATIO}
           style={{ left: (width - maxWidth) / 2 }}
+          title={trackName}
         />
       );
     }}

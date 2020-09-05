@@ -30,7 +30,7 @@ const SignUp = ({ subscribe, status }: { subscribe: any; status: Status }) => {
 
   return (
     <Form
-      className={'signup'}
+      className="signup"
       onSubmit={() => {}}
       error={false}
       warning={false}
@@ -38,9 +38,9 @@ const SignUp = ({ subscribe, status }: { subscribe: any; status: Status }) => {
       <h3>בואו להיות חברי העט שלי</h3>
       <Form.Input
         onChange={(e) => setMail(e.target.value)}
-        placeholder={'Email'}
+        placeholder="Email"
         error={error}
-        label={'כתובת מייל'}
+        label="כתובת מייל"
       />
       <Form.Button
         onClick={() => onSubmit()}

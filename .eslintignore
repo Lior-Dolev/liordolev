@@ -2,3 +2,5 @@
 node_modules
 SEMANTIC-UI-LESS
 .storybook
+dist
+webpack.config.js

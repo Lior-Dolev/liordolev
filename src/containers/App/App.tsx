@@ -4,8 +4,8 @@ import { MobileHeader, Newsletter } from '@components';
 import Router from './Router';
 
 export default class App extends Component<
-  {},
-  { isMenuOpen: boolean; isNewsletterOpen: boolean }
+{},
+{ isMenuOpen: boolean; isNewsletterOpen: boolean }
 > {
   constructor(props) {
     super(props);
@@ -22,13 +22,13 @@ export default class App extends Component<
 
     return (
       <HashRouter>
-        <div className={'ld-app'}>
+        <div className="ld-app">
           <MobileHeader
             onOpenModal={() => this.setState({ isMenuOpen: true })}
             onCloseModal={() => this.setState({ isMenuOpen: false })}
             tabIndex={isNewsletterOpen ? -1 : null}
           />
-          <main className={'main'}>
+          <main className="main">
             <div style={{ height: 59 }} />
             <Router tabIndex={tabIndex} />
           </main>

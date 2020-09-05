@@ -45,25 +45,25 @@ const MobileHeader = ({
     <>
       <Menu
         className={classnames('header mobile', className)}
-        as={'header'}
+        as="header"
         inverted
-        fixed={'top'}
+        fixed="top"
       >
         <Menu.Item
           as={Button}
           onClick={() => setIsOverlayVisible(!isOverlayVisible)}
           tabIndex={tabIndex}
         >
-          <Icon tabIndex={'-1'} name={'bars'} />
+          <Icon tabIndex="-1" name="bars" />
         </Menu.Item>
         <Menu.Item
           as={Link}
-          to={'/'}
-          className={'logo'}
+          to="/"
+          className="logo"
           onClick={() => setIsOverlayVisible(false)}
           tabIndex={tabIndex}
         >
-          <Logo width={'13.5rem'} height={'3rem'} />
+          <Logo width="13.5rem" height="3rem" />
         </Menu.Item>
       </Menu>
       <MenuOverlay

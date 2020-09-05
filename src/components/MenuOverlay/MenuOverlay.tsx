@@ -1,5 +1,7 @@
 import React from 'react';
-import { Sidebar, SidebarProps, Segment, Menu } from 'semantic-ui-react';
+import {
+  Sidebar, SidebarProps, Segment, Menu,
+} from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 const MenuOverlay = ({
@@ -15,20 +17,20 @@ const MenuOverlay = ({
     direction={direction}
     visible={visible}
   >
-    <div className={'nav-wrapper'}>
-      <Menu as={'nav'}>
-        <Menu.Item tabIndex={tabIndex} onClick={onClick} as={Link} to={'/'}>
+    <div className="nav-wrapper">
+      <Menu as="nav">
+        <Menu.Item tabIndex={tabIndex} onClick={onClick} as={Link} to="/">
           בית
         </Menu.Item>
         <Menu.Item
           tabIndex={tabIndex}
           onClick={onClick}
           as={Link}
-          to={'/music'}
+          to="/music"
         >
           מוזיקה
         </Menu.Item>
-        <Menu.Item tabIndex={tabIndex} onClick={onClick} as={Link} to={'/tour'}>
+        <Menu.Item tabIndex={tabIndex} onClick={onClick} as={Link} to="/tour">
           הופעות
         </Menu.Item>
         <Menu.Item tabIndex={tabIndex}>חנות (בקרוב)</Menu.Item>
@@ -36,7 +38,7 @@ const MenuOverlay = ({
           tabIndex={tabIndex}
           onClick={onClick}
           as={Link}
-          to={'/about'}
+          to="/about"
         >
           אודות
         </Menu.Item>
@@ -44,7 +46,7 @@ const MenuOverlay = ({
           tabIndex={tabIndex}
           onClick={onClick}
           as={Link}
-          to={'/contact'}
+          to="/contact"
         >
           צרו קשר
         </Menu.Item>

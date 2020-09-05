@@ -1,2 +1,3 @@
-import './App.less'
-export { default } from './App'
+import './App.less';
+
+export { default } from './App';

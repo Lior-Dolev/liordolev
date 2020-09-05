@@ -13,15 +13,15 @@ const Router = (routerProps: RouterProps) => (
   <Switch>
     <Route
       exact
-      path={'/'}
+      path="/"
       render={(props) => <Home {...props} {...routerProps} />}
     />
-    <Route exact path={'/music'} component={Music} />
-    <Route exact path={'/tour'} component={Tour} />
-    <Route exact path={'/about'} component={About} />
-    <Route exact path={'/contact'} component={Contact} />
-    <Route path={'*'}>
-      <Redirect to={'/'} />
+    <Route exact path="/music" component={Music} />
+    <Route exact path="/tour" component={Tour} />
+    <Route exact path="/about" component={About} />
+    <Route exact path="/contact" component={Contact} />
+    <Route path="*">
+      <Redirect to="/" />
     </Route>
   </Switch>
 );

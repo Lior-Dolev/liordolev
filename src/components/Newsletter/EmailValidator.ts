@@ -10,17 +10,13 @@ export const ErrorMessages = {
 
 const isBlank = (value: string) => !value || !value.trim().length;
 
-const singleAt = (value: string) =>
-  !isBlank(value) && value.split('@').length === 2;
+const singleAt = (value: string) => !isBlank(value) && value.split('@').length === 2;
 
-const hasDomain = (value: string) =>
-  singleAt(value) && !isBlank(value.split('@')[1]);
+const hasDomain = (value: string) => singleAt(value) && !isBlank(value.split('@')[1]);
 
-const domainSingleDot = (value: string) =>
-  hasDomain(value) && value.split('@')[1].split('.').length > 1;
+const domainSingleDot = (value: string) => hasDomain(value) && value.split('@')[1].split('.').length > 1;
 
-const domainSecondPartNotBlank = (value: string) =>
-  domainSingleDot(value) && !isBlank(value.split('@')[1].split('.')[1]);
+const domainSecondPartNotBlank = (value: string) => domainSingleDot(value) && !isBlank(value.split('@')[1].split('.')[1]);
 
 const validation = (mail: string) => {
   if (isBlank(mail)) {
@@ -42,6 +38,8 @@ const validation = (mail: string) => {
   if (!domainSecondPartNotBlank(mail)) {
     return ErrorMessages.second_part_domain_blank;
   }
+
+  return null;
 };
 
 export default validation;

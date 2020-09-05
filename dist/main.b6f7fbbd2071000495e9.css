@@ -16873,6 +16873,59 @@ nav.social .link:last-child {
 /*******************************
               Music
 *******************************/
+.ld-app .page.music {
+  display: flex;
+  justify-content: center;
+}
+.ld-app .page.music .album {
+  width: fit-content;
+}
+.ld-app .page.music .album .cover {
+  height: 331px;
+  width: 331px;
+}
+.ld-app .page.music .album .track {
+  direction: rtl;
+  padding: 0.5em;
+  font-weight: bold;
+}
+.ld-app .page.music .album .track .name {
+  display: block;
+}
+.ld-app .page.music .album .track .extra {
+  font-size: larger;
+}
+.ld-app .page.music .album .controls button {
+  padding: 0;
+  background: transparent;
+  box-shadow: none !important;
+}
+.ld-app .page.music .album .controls button.tiny i {
+  font-size: initial;
+}
+.ld-app .page.music .album .controls progress {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  height: 6px;
+}
+.ld-app .page.music .album .controls progress[value]::-webkit-progress-bar {
+  background-color: rgba(140, 140, 139, 0.5);
+}
+.ld-app .page.music .album .controls progress[value]::-webkit-progress-value {
+  background-color: #8c8c8b;
+}
+.ld-app .page.music .album .controls {
+  padding: 0.5em;
+}
+.ld-app .page.music .album .controls div.volume {
+  padding-left: 3px;
+  padding-top: 5px;
+}
+.ld-app .page.music .album .controls progress {
+  margin-right: 8px;
+  margin-left: 8px;
+}
 
 /*******************************
               Tour

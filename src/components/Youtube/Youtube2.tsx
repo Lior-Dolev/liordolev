@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { findDOMNode } from 'react-dom';
 import { YoutubeProps } from './types';
 
 const YOUTUBE_HEIGHT_RATIO = 0.5625;
 const YOUTUBE_WIDTH_RATIO = 1.7777;
-const PADDING = 0.1;
-const SIZE = 1 - PADDING;
+// const PADDING = 0.1;
+// const SIZE = 1 - PADDING;
 
 const VideoSrc = {
   'משכך כאבים': 'https://www.youtube.com/embed/BSkZqI0RZ9Q',
@@ -17,15 +16,6 @@ const VideoSrc = {
 const Youtube = ({ trackName, containerId }: YoutubeProps) => {
   const [width, setWidth] = useState(1);
   const [height, setHeight] = useState(1);
-
-  useEffect(() => {
-    onResize();
-    window.addEventListener('resize', onResize);
-
-    return () => {
-      window.removeEventListener('resize', onResize);
-    };
-  }, []);
 
   const onResize = () => {
     const containerWidth = document.getElementById(containerId).clientWidth;
@@ -40,6 +30,15 @@ const Youtube = ({ trackName, containerId }: YoutubeProps) => {
     setHeight(maxWidth * YOUTUBE_HEIGHT_RATIO);
   };
 
+  useEffect(() => {
+    onResize();
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
+
   return (
     <iframe
       src={`${VideoSrc[trackName]}?rel=0`}
@@ -48,6 +47,7 @@ const Youtube = ({ trackName, containerId }: YoutubeProps) => {
       allowFullScreen
       width={width}
       height={height}
+      title={trackName}
     />
   );
 };

@@ -4,9 +4,9 @@ import Text from './Text';
 import TourImg from './Tour.jpg';
 
 const Tour = () => (
-  <Page className={'tour'}>
-    <div className={'image'}>
-      <img src={TourImg} />
+  <Page className="tour">
+    <div className="image">
+      <img src={TourImg} alt="הופעה" />
     </div>
     <Text />
   </Page>

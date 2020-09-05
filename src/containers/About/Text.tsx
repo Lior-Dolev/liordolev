@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Text = () => (
-  <div className={'text'}>
+  <div className="text">
     <p>
-      <span className={'break'}>
+      <span className="break">
         ליאור דולב, בת 27 מתל אביב, רודפת כבר שנים אחרי התשוקה לכתיבה.
       </span>
       <span>

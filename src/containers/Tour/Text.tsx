@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Text = () => (
-  <div className={'text'}>
+  <div className="text">
     <p>
-      <span className={'break'}>
+      <span className="break">
         כמו שאתם בטח כבר יודעים, הקורונה מאתגרת את היכולת להופיע.
       </span>
       <span>בינתיים אני עובדת על ההופעה כדי שתהנו בה לפחות כמוני.</span>

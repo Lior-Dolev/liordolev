@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Letter = () => (
-  <div className={'letter'}>
+  <div className="letter">
     <p>
-      <span className={'break'}>
+      <span className="break">
         כל מה שעשיתי מאז הפעם הראשונה שאהבתי זה לנסות למצוא את המילים.
       </span>
       <span>
@@ -14,7 +14,7 @@ const Letter = () => (
     <p>
       <span>בהתחלה הייתי שומרת את כל המילים לעצמי.</span>
       <span>עד היום אני ממעיטה בדיבור.</span>
-      <span className={'break'}>מעדיפה להקשיב או לעבד את המחשבה בכתיבה.</span>
+      <span className="break">מעדיפה להקשיב או לעבד את המחשבה בכתיבה.</span>
       <span>
         בהמשך קרבתי אל ליבי אנשים בודדים, אזרתי אומץ והשמעתי להם את השירים שלי.
       </span>
@@ -22,7 +22,7 @@ const Letter = () => (
         בכל פעם ראשונה כזו, הלב שלי דהר במהירות, הפה התייבש, חום הגוף עלה וכמעט
         שעשה לי קצר במוח.
       </span>
-      <span className={'break'}>ככה הרגשתי.</span>
+      <span className="break">ככה הרגשתי.</span>
       <span>
         אני, ששותקת רוב הזמן, פתאום יושבת מול אדם ואומרת "יש לי מה להגיד".
       </span>
@@ -40,7 +40,7 @@ const Letter = () => (
     </p>
     <p>
       <span>אהבתי עד העצמות.</span>
-      <span className={'break'}>
+      <span className="break">
         אהבות נעורים ואהבות בוגרות, אהבות טובות ואהבות פוצעות.
       </span>
       <span>
@@ -50,7 +50,7 @@ const Letter = () => (
     </p>
     <p>
       <span>האמת הכי נקיה שלי נמצאת בשירים האלה.</span>
-      <span className={'break'}>
+      <span className="break">
         אני לא מכירה אתכם ובכל זאת נותנת לכם כרטיס כניסה חופשי אל המקום הכי שמור
         שלי.
       </span>
@@ -86,10 +86,10 @@ const Letter = () => (
       האלבום הזה מוקדש לכל מי שאי פעם הרגיש את מיקומו של הלב רק על פי עוצמת
       הכאב.
     </p>
-    <p className={'signature'}>
+    <p className="signature">
       <span>נתראה בשירים,</span>
       <span>אוהבת,</span>
-      <span className={'cursor'}>ליאור.</span>
+      <span className="cursor">ליאור.</span>
     </p>
   </div>
 );
