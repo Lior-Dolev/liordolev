@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Page } from '@layouts';
-import { Button } from 'semantic-ui-react';
+import { Button, Icon } from 'semantic-ui-react';
+import classnames from 'classnames';
 import AlbumCover from './Album_Cover.jpg';
 
 type AudioTrack = {
@@ -107,6 +108,9 @@ const Music = () => {
   }
 
   const onPlay = () => {
+    if (!autoPlay) {
+      setAutoPlay(true);
+    }
     audioRef.current.play();
   };
 
@@ -246,8 +250,17 @@ const Music = () => {
         <div className="track-list">
           {audioList.map(({ trackName: name, duration }, i) => (
             // eslint-disable-next-line
-            <div className="track" onClick={() => onTrackClick(i)}>
-              <span className="number">{i + 1}</span>
+            <div
+              key={name}
+              className={classnames('track', {
+                active: autoPlay && i === trackIndex,
+              })}
+              onClick={() => onTrackClick(i)}
+            >
+              <span className="number">
+                <span className="text">{i + 1}</span>
+                <Icon name="play" />
+              </span>
               <span className="name">{name}</span>
               <span className="duration">{duration}</span>
             </div>

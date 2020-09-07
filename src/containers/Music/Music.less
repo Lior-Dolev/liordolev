@@ -5,6 +5,7 @@
 .ld-app .page.music {
   display: flex;
   justify-content: center;
+  padding-top: 20px;
 }
 
 .ld-app .page.music .album {
@@ -84,7 +85,23 @@
   padding-bottom: 10px;
 }
 
-.ld-app .page.music .album .track-list .track:hover {
+.ld-app .page.music .album .track-list .track:hover,
+.ld-app .page.music .album .track-list .track.active {
   color: #8c8c8b;
   cursor: pointer;
+}
+
+.ld-app .page.music .album .track-list .track .number i.icon.play {
+  display: none;
+  font-size: 11px;
+}
+
+.ld-app .page.music .album .track-list .track:hover .number i.icon.play,
+.ld-app .page.music .album .track-list .track.active .number i.icon.play {
+  display: inline;
+}
+
+.ld-app .page.music .album .track-list .track:hover .number .text,
+.ld-app .page.music .album .track-list .track.active .number .text {
+  display: none;
 }
