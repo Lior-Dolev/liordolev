@@ -1,11 +1,8 @@
 import React from 'react';
-import AutoSizer from 'react-virtualized-auto-sizer';
 import { YoutubeProps } from './types';
 
-const YOUTUBE_HEIGHT_RATIO = 0.5625;
-const YOUTUBE_WIDTH_RATIO = 1.7777;
-const PADDING = 0.1;
-const SIZE = 1 - PADDING;
+// const YOUTUBE_HEIGHT_RATIO = 0.5625;
+// const YOUTUBE_WIDTH_RATIO = 1.7777;
 
 const VideoSrc = {
   'משכך כאבים': 'https://www.youtube.com/embed/BSkZqI0RZ9Q',
@@ -15,30 +12,15 @@ const VideoSrc = {
 };
 
 const Youtube = ({ trackName }: YoutubeProps) => (
-  <AutoSizer>
-    {({ height, width }) => {
-      const paddedHeight = height * SIZE;
-      const paddedWidth = width * SIZE;
-
-      const maxWidth = Math.min(
-        paddedHeight * YOUTUBE_WIDTH_RATIO,
-        paddedWidth,
-      );
-
-      return (
-        <iframe
-          src={`${VideoSrc[trackName]}?rel=0`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          width={maxWidth}
-          height={maxWidth * YOUTUBE_HEIGHT_RATIO}
-          style={{ left: (width - maxWidth) / 2 }}
-          title={trackName}
-        />
-      );
-    }}
-  </AutoSizer>
+  <iframe
+    src={`${VideoSrc[trackName]}?rel=0&controls=0&autoplay=1&mute=1`}
+    frameBorder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    // allowFullScreen
+    width="100%"
+    height="375px"
+    title={trackName}
+  />
 );
 
 export default Youtube;

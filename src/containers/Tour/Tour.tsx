@@ -6,7 +6,7 @@ import TourImg from './Tour.jpg';
 const Tour = () => (
   <Page className="tour">
     <div className="image">
-      <img src={TourImg} alt="הופעה" />
+      <img src={TourImg} alt="הופעה" title="צילום: שלומי פרין" />
     </div>
     <Text />
   </Page>

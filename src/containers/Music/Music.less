@@ -2,106 +2,20 @@
               Music
 *******************************/
 
-.ld-app .page.music {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
+// .ld-app .page.music {
+//   // display: flex;
+//   // justify-content: center;
+//   padding-bottom: 375px;
+// }
+
+// .ytp-pause-overlay.ytp-scroll-min.ytp-scroll-max {
+//   display: none;
+// }
+
+.ld-app .page.music .music-player {
+  min-height: calc(100vh - 60px);
 }
 
-.ld-app .page.music .album {
-  width: fit-content;
-}
-
-.ld-app .page.music .album .cover {
-  height: 331px;
-  width: 331px;
-}
-
-.ld-app .page.music .album > .track {
-  direction: rtl;
-  padding: 0.5em;
-  font-weight: bold;
-}
-
-.ld-app .page.music .album > .track .name {
-  display: block;
-}
-
-.ld-app .page.music .album > .track .extra {
-  font-size: larger;
-}
-
-.ld-app .page.music .album .controls button {
-  padding: 0;
-  background: transparent;
-  box-shadow: none !important;
-}
-
-.ld-app .page.music .album .controls button.tiny i {
-  font-size: initial;
-}
-
-.ld-app .page.music .album .controls progress {
-  -webkit-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  height: 6px;
-}
-
-.ld-app .page.music .album .controls progress[value]::-webkit-progress-bar {
-  background-color: rgba(140, 140, 139, 0.5);
-}
-
-.ld-app .page.music .album .controls progress[value]::-webkit-progress-value {
-  background-color: rgba(140, 140, 139, 1);
-}
-
-.ld-app .page.music .album .controls {
-  padding: 0.5em;
-}
-
-.ld-app .page.music .album .controls div.volume {
-  padding-left: 3px;
-  padding-top: 5px;
-}
-
-.ld-app .page.music .album .controls progress {
-  margin-right: 8px;
-  margin-left: 8px;
-}
-
-.ld-app .page.music .album .track-list {
-  padding: 10px;
-}
-
-.ld-app .page.music .album .track-list .track {
-  display: grid;
-  direction: rtl;
-  grid-template-columns: 10px 1fr auto;
-  grid-gap: 10px;
-  border-top: 1px solid grey;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.ld-app .page.music .album .track-list .track:hover,
-.ld-app .page.music .album .track-list .track.active {
-  color: #8c8c8b;
-  cursor: pointer;
-}
-
-.ld-app .page.music .album .track-list .track .number i.icon.play {
-  display: none;
-  font-size: 11px;
-}
-
-.ld-app .page.music .album .track-list .track:hover .number i.icon.play,
-.ld-app .page.music .album .track-list .track.active .number i.icon.play {
-  display: inline;
-}
-
-.ld-app .page.music .album .track-list .track:hover .number .text,
-.ld-app .page.music .album .track-list .track.active .number .text {
-  display: none;
+.ld-app .page.music .album-lyrics {
+  padding-top: 60px;
 }

@@ -22,24 +22,19 @@ const MenuOverlay = ({
         <Menu.Item tabIndex={tabIndex} onClick={onClick} as={Link} to="/">
           בית
         </Menu.Item>
-        <Menu.Item
+        {/* <Menu.Item
           tabIndex={tabIndex}
           onClick={onClick}
           as={Link}
           to="/music"
         >
           מוזיקה
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item tabIndex={tabIndex} onClick={onClick} as={Link} to="/tour">
           הופעות
         </Menu.Item>
         <Menu.Item tabIndex={tabIndex}>חנות (בקרוב)</Menu.Item>
-        <Menu.Item
-          tabIndex={tabIndex}
-          onClick={onClick}
-          as={Link}
-          to="/about"
-        >
+        <Menu.Item tabIndex={tabIndex} onClick={onClick} as={Link} to="/about">
           אודות
         </Menu.Item>
         <Menu.Item

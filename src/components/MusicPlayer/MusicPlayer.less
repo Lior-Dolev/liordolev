@@ -1,0 +1,113 @@
+/*******************************
+           Music Player
+*******************************/
+
+.music-player {
+  width: fit-content;
+}
+
+.music-player .cover {
+  height: 331px;
+  width: 331px;
+}
+
+.music-player > .track {
+  direction: rtl;
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+.music-player > .track .name {
+  display: block;
+}
+
+.music-player > .track .extra {
+  font-size: larger;
+}
+
+.music-player .controls .ui.icon.button {
+  padding: 0;
+  background: transparent;
+  box-shadow: none !important;
+}
+
+.music-player .controls button.tiny i {
+  font-size: initial;
+}
+
+.music-player .controls progress {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  height: 6px;
+}
+
+.music-player .controls progress[value]::-webkit-progress-bar {
+  background-color: rgba(140, 140, 139, 0.5);
+}
+
+.music-player .controls progress[value]::-webkit-progress-value {
+  background-color: rgba(140, 140, 139, 1);
+}
+
+.music-player .controls {
+  padding: 0.5em;
+}
+
+.music-player .controls div.volume {
+  padding-left: 3px;
+  padding-top: 5px;
+}
+
+.music-player .controls progress {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.music-player .track-list {
+  padding: 10px;
+}
+
+.music-player .track-list .track {
+  display: grid;
+  direction: rtl;
+  grid-template-columns: 10px 1fr auto;
+  grid-gap: 10px;
+  border-top: 1px solid grey;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .music-player .track-list .track:hover {
+    color: #8c8c8b;
+    cursor: pointer;
+  }
+
+  .music-player .track-list .track:hover .number i.icon.play {
+    display: inline;
+  }
+
+  .music-player .track-list .track:hover .number .text {
+    display: none;
+  }
+}
+
+.music-player .track-list .track.active {
+  color: #8c8c8b;
+  cursor: pointer;
+}
+
+.music-player .track-list .track .number i.icon.play {
+  display: none;
+  font-size: 11px;
+}
+
+.music-player .track-list .track.active .number i.icon.play {
+  display: inline;
+}
+
+.music-player .track-list .track.active .number .text {
+  display: none;
+}

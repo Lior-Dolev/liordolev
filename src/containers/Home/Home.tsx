@@ -8,7 +8,7 @@ import { HomeProps } from './types';
 const Home = ({ tabIndex }: HomeProps) => (
   <Page className="home">
     <div className="image-container">
-      <img src={cactus} alt="משכך כאבים" />
+      <img src={cactus} alt="משכך כאבים" title="איור: דור פרי" />
       <Button
         as="a"
         href="https://orcd.co/lior_dolevep"

@@ -6,7 +6,7 @@ import Lior from './lior.jpg';
 const About = () => (
   <Page className="about">
     <div className="image">
-      <img src={Lior} alt="ליאור" />
+      <img src={Lior} alt="ליאור" title="צילום: שלומי פרין" />
     </div>
     <Text />
   </Page>

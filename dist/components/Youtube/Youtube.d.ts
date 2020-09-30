@@ -1,4 +1,4 @@
 /// <reference types="react" />
 import { YoutubeProps } from './types';
-declare const Youtube: ({ trackName, containerId }: YoutubeProps) => JSX.Element;
+declare const Youtube: ({ trackName }: YoutubeProps) => JSX.Element;
 export default Youtube;
