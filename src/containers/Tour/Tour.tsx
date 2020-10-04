@@ -1,7 +1,7 @@
 import React from 'react';
 import { Page } from '@layouts';
 import Text from './Text';
-import TourImg from './Tour.jpg';
+import TourImg from './tour-min.jpg';
 
 const Tour = () => (
   <Page className="tour">

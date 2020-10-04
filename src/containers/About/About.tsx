@@ -1,7 +1,7 @@
 import React from 'react';
 import { Page } from '@layouts';
 import Text from './Text';
-import Lior from './lior.jpg';
+import Lior from './lior-min.jpg';
 
 const About = () => (
   <Page className="about">

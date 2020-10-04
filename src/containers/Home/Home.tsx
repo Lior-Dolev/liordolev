@@ -2,7 +2,7 @@ import React from 'react';
 import { Letter, SocialNav } from '@components';
 import { Button } from 'semantic-ui-react';
 import { Page } from '@layouts';
-import cactus from './cactus.png';
+import cactus from './cactus-min.jpg';
 import { HomeProps } from './types';
 
 const Home = ({ tabIndex }: HomeProps) => (
