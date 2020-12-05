@@ -16987,11 +16987,25 @@ video.video-player {
   font-family: 'Rubik', sans-serif;
 }
 
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.page-header > h1 {
+  margin: 1rem 0 0;
+  font-size: 2.5rem;
+}
+.page-header > svg {
+  width: 14rem;
+}
+
 /*******************************
               Tour
 *******************************/
 .ld-app .page.tour .text {
-  padding: 3rem;
+  padding: 0 3rem 3rem;
   direction: rtl;
   display: grid;
   justify-content: center;
@@ -17024,7 +17038,7 @@ video.video-player {
               About
 *******************************/
 .ld-app .page.about .text {
-  padding: 3rem;
+  padding: 0 3rem 3rem;
   padding-top: 1rem;
   direction: rtl;
   display: grid;
@@ -17044,7 +17058,6 @@ video.video-player {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 20px;
   padding-top: 0;
   min-height: 375px;
   display: flex;
