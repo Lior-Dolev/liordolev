@@ -17022,7 +17022,7 @@ video.video-player {
 }
 .ld-app .page.tour div.image {
   width: 100%;
-  max-height: 60vh;
+  min-height: 175px;
   display: flex;
   justify-content: center;
   background-color: transparent;
@@ -17032,6 +17032,7 @@ video.video-player {
   width: 100%;
   align-self: flex-start;
   object-fit: cover;
+  min-height: inherit;
 }
 
 /*******************************
