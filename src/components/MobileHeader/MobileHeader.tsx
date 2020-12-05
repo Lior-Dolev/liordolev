@@ -44,7 +44,7 @@ const MobileHeader = ({
   return (
     <>
       <Menu
-        className={classnames('header mobile', className)}
+        className={classnames('mobile', 'header', className)}
         as="header"
         inverted
         fixed="top"

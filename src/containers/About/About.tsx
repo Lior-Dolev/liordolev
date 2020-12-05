@@ -8,6 +8,7 @@ const About = () => (
     <div className="image">
       <img src={Lior} alt="ליאור" title="צילום: שלומי פרין" />
     </div>
+    <Page.Header header="אודות" />
     <Text />
   </Page>
 );

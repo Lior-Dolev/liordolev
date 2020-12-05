@@ -3,7 +3,7 @@ import { Page } from '@layouts';
 
 const Contact = () => (
   <Page className="contact">
-    <h1>צרו קשר</h1>
+    <Page.Header header="צרו קשר" />
     <section>
       <h2>לפניות תקשורת:</h2>
       <span>

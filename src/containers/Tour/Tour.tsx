@@ -8,6 +8,7 @@ const Tour = () => (
     <div className="image">
       <img src={TourImg} alt="הופעה" title="צילום: גיא לומר" />
     </div>
+    <Page.Header header="הופעות - 2021" />
     <Text />
   </Page>
 );
