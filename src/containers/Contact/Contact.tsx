@@ -2,7 +2,7 @@ import React from 'react';
 import { Page } from '@layouts';
 
 const Contact = () => (
-  <Page className="contact">
+  <Page className="contact" path="צרו קשר">
     <Page.Header header="צרו קשר" />
     <section>
       <h2>לפניות תקשורת:</h2>

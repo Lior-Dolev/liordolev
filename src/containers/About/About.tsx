@@ -4,7 +4,7 @@ import Text from './Text';
 import Lior from './lior-min.jpg';
 
 const About = () => (
-  <Page className="about">
+  <Page className="about" path="אודות">
     <div className="image">
       <img src={Lior} alt="ליאור" title="צילום: שלומי פרין" />
     </div>

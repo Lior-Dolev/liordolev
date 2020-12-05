@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Letter = () => (
-  <div className="letter">
+  <article className="letter">
     <p>
       <span className="break">
         כל מה שעשיתי מאז הפעם הראשונה שאהבתי זה לנסות למצוא את המילים.
@@ -91,7 +91,7 @@ const Letter = () => (
       <span>אוהבת,</span>
       <span className="cursor">ליאור.</span>
     </p>
-  </div>
+  </article>
 );
 
 export default Letter;

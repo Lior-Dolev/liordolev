@@ -3,4 +3,5 @@ export type PageProps = {
   id?: string;
   tabIndex?: number;
   children?: any;
+  path?: string;
 };
