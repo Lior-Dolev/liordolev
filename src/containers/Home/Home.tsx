@@ -1,14 +1,13 @@
 import React from 'react';
-import { Letter, SocialNav } from '@components';
+import { Letter, SocialNav, Youtube } from '@components';
 import { Button } from 'semantic-ui-react';
 import { Page } from '@layouts';
-import cactus from './cactus-min.jpg';
 import { HomeProps } from './types';
 
 const Home = ({ tabIndex }: HomeProps) => (
   <Page className="home">
     <div className="image-container">
-      <img src={cactus} alt="משכך כאבים" title="איור: דור פרי" />
+      <Youtube trackName="live session" />
       <Button
         as="a"
         href="https://orcd.co/lior_dolevep"
@@ -16,7 +15,7 @@ const Home = ({ tabIndex }: HomeProps) => (
         inverted
         tabIndex={tabIndex}
       >
-        משכך כאבים EP זמין להאזנה
+        כאבי גדילה EP זמין להאזנה
       </Button>
       <div className="social">
         <SocialNav tabIndex={tabIndex} />

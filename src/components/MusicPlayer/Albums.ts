@@ -16,7 +16,7 @@ export const MESHAKECH_KEEVIM: Album = {
   title: 'משכך כאבים',
   artist: 'ליאור דולב',
   artworkSrc:
-    'https://s3.eu-central-1.amazonaws.com/liordolev.com/music/Album_Cover.png',
+    'https://s3.eu-central-1.amazonaws.com/liordolev.com/music/Album_Cover.jpg',
   tracks: [
     {
       title: 'משכך כאבים',

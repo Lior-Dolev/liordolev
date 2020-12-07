@@ -16958,7 +16958,7 @@ video.video-player {
   display: grid;
   justify-content: center;
   background-color: black;
-  grid-template-rows: 375px auto 1fr;
+  grid-template-rows: auto auto 1fr;
   grid-gap: 1em;
 }
 .image-container img {
@@ -16971,6 +16971,9 @@ video.video-player {
   align-items: center;
   display: flex;
   justify-content: center;
+  width: 250px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .image-container div.social {
   display: flex;

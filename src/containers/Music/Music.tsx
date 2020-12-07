@@ -1,10 +1,11 @@
 import React from 'react';
 import { Page } from '@layouts';
-import { Album, VideoPlayer } from '@components';
+import { Album, Youtube } from '@components';
 
 const Music = () => (
   <Page className="music">
-    <VideoPlayer />
+    {/* <VideoPlayer /> */}
+    <Youtube trackName="משכך כאבים" />
     {/* <MusicPlayer albumName="MESHAKECH_KEEVIM" /> */}
     <Album />
   </Page>
