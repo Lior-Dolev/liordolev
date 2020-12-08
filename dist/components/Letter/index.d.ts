@@ -1,2 +1,2 @@
 import './Letter.less';
-export { default } from './Letter';
+export { default } from './Letter2';
