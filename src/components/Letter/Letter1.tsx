@@ -1,5 +1,7 @@
 import React from 'react';
 
+// משכך כאבים //
+
 const Letter = () => (
   <article className="letter">
     <p>
