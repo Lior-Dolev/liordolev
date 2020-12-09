@@ -15,7 +15,7 @@ const Home = ({ tabIndex }: HomeProps) => (
         inverted
         tabIndex={tabIndex}
       >
-        כאבי גדילה EP זמין להאזנה
+        משכך כאבים EP זמין להאזנה
       </Button>
       <div className="social">
         <SocialNav tabIndex={tabIndex} />
