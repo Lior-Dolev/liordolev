@@ -10,12 +10,12 @@ const Home = ({ tabIndex }: HomeProps) => (
       <Youtube trackName="live session" />
       <Button
         as="a"
-        href="https://orcd.co/lior_dolevep"
+        href="https://backl.ink/143515684"
         target="_blank"
         inverted
         tabIndex={tabIndex}
       >
-        משכך כאבים EP זמין להאזנה
+        כאבי גדילה EP זמין להאזנה
       </Button>
       <div className="social">
         <SocialNav tabIndex={tabIndex} />
